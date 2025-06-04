@@ -1,0 +1,23 @@
+/* VWB_Home.css */
+
+.gradient-text {
+    background: linear-gradient(90deg, #007bff, #6f42c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInBounce 5s ease-in-out forwards infinite;
+}
+
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}

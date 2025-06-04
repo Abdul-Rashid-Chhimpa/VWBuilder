@@ -1,0 +1,16 @@
+/* Form.css */
+
+.gradient-form {
+    background: linear-gradient(90deg, #007bff60, #6e42c141);
+    border: 1px solid rgba(112, 128, 144, 0.3);
+    color: #fff;
+}
+
+.gradient-form input.form-control {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.gradient-form small {
+    color: #e0e0e0;
+    /* Lighter gray for the small text */
+}

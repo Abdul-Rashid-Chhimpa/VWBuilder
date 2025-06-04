@@ -1,0 +1,43 @@
+.header {
+    background-color: rgb(43 128 0 / var(--tw-bg-opacity, 1));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    color: #fff;
+    margin-bottom: 2%;
+}
+
+.header-left {
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-left h1 {
+    font-size: 32px;
+}
+
+.header-left h1::first-letter {
+    color: rgb(124 28 165 / var(--tw-text-opacity, 1));
+    font-size: 44px;
+    font-style: italic;
+}
+
+.header-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 1%;
+}
+
+.header-right button {
+    padding: 1%;
+    background-color: #fff;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10%;
+}

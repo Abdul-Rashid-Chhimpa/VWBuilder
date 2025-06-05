@@ -41,6 +41,31 @@ const EditText = ({ element, onUpdate, onClose }) => {
     onUpdate({ ...props, style: newStyle });
   };
 
+const changeTextColor = (clr) => {
+    const newStyle = {
+        ...style,
+        color: clr, // Use 'color' instead of 'clr'
+    };
+    onUpdate({ ...props, style: newStyle });
+};
+
+  const colors = [
+    // Reds
+ 'text-red-100','text-red-200','text-red-500','text-red-700','text-red-900',
+    // Oranges
+ 'text-orange-100','text-orange-200','text-orange-500','text-orange-700','text-orange-900',
+    // Yellows
+   'text-yellow-50','text-yellow-300','text-yellow-500','text-yellow-700','text-yellow-900',
+    // Greens
+ 'text-green-200','text-green-500', 'text-green-700', 'text-green-800', 'text-green-950',
+    // Blues
+    'text-blue-100', 'text-blue-300', 'text-blue-500', 'text-blue-700', 'text-blue-800',
+ //Pink
+  'text-pink-50', 'text-pink-200', 'text-pink-300', 'text-pink-500', 'text-pink-700', 'text-pink-950',
+    // Grays/Black/White
+ 'text-gray-50', 'text-gray-100', 'text-gray-300', 'text-gray-500', 'text-gray-700', 'text-gray-900',
+  ];
+
   return (
     <>
     <div className="h-auto bg-blue-50 shadow-md p-1 rounded flex flex-row justify-center items-center gap-2">
@@ -91,6 +116,17 @@ const EditText = ({ element, onUpdate, onClose }) => {
         <option value="text-4xl">24px</option>
         <option value="text-6xl">30px</option>
       </select>
+    <select
+    className="select size-8 select-bordered select-md w-full bg-blue-50"
+    onChange={(e) => changeTextColor(e.target.value)} // Use onChange on select
+    value={style.color || '#000000'} // Default to black if no color is set
+>
+    {colors.map((clr, index) => (
+        <option key={index} value={clr} className={`${clr} font-bold` } style={{ color: clr }}>
+            {clr}
+        </option>
+    ))}
+</select>
     </div>
     
     </>
@@ -98,3 +134,5 @@ const EditText = ({ element, onUpdate, onClose }) => {
 };
 
 export default EditText;
+
+
